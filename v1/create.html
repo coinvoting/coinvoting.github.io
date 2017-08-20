@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CoinVoting dapp </title>
+	<link rel="stylesheet" type="text/css" href="css/milligram.css">
+	<link rel="stylesheet" type="text/css" href="css/style-poll.css">
+	<link rel="stylesheet" type="text/css" href="js/ui/trumbowyg.min.css">
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/strarrbuffutils.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/trumbowyg.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
+	<script type="text/javascript" src="js/web3.js"></script>
+	<script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+</head>
+<body>
+	<div class="navbar">
+		<span id="mytokens"></span>
+	</div>
+	<div class="container paperpage">
+		<div class="loader"></div>
+		<div class="row">
+			<div class="column" id="aboutd">
+
+				<h2 style="text-align: center;">Create a Coin Voting Proposal</h2>
+				<blockquote>
+				  <p><em>Coin Voting helps you get coin votes for your organisation proposals backed by your tokens or ethereum community backed by ethers. Coin Voting uses IPFS
+						to persist meta information and persist votes over ethereum. Please reach out <a href="https://github.com/coinvoting/coinvoting.github.io/issues" target="_blank"><b>here</b></a> for any issues. We appreciate your support to help us become better.
+					</em></p>
+				</blockquote>
+				<p id="isconnected"><b>Looking for Ethereum account...<b> <small>make sure you are connected to blockchain over your browser. </small></p>
+
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="column column-20">
+
+			</div>
+
+
+			<div class="column column-60">
+				<form method="post" id="form">
+					<ul style="list-style:none;" id="formlists">
+
+						<li class="poll_contract" style="display: none;">
+							<legend class="big-legend">ERC20 Token Address</legend>
+							<input type="text" name="poll_contract" id="poll_contract" autocomplete="off" placeholder="e.g., 0x0AbdAce70D3790235af448C88547603b945604ea" />
+							<span id="error_poll_contract"></span>
+							<small>Enter 0x0 to carbonvote on Ethers</small>
+						</li>
+
+						<li class="poll_symbol" style="display: none;">
+							<legend class="big-legend">Token Symbol</legend>
+							<input type="text" name="poll_symbol" id="poll_symbol" autocomplete="off" placeholder="e.g., DNT" />
+							<span id="error_poll_symbol"></span>
+						</li>
+
+						<li class="poll_title" style="display: none;">
+							<legend class="big-legend">Title</legend>
+							<input type="text" name="poll_title" id="poll_title" autocomplete="off" />
+							<span id="error_poll_title"></span>
+						</li>
+
+						<li class="poll_description" style="display: none;">
+							<legend class="big-legend">Description</legend>
+							<small>For initial adopters in your community, organizations prefer explaining <a href="https://github.com/coinvoting/coinvoting.github.io/wiki/How-does-CoinVoting-work%3F" target="_blank">how coin voting works</a> as well. </small>
+							<textarea name="poll_description" id="poll_description" autocomplete="off" ></textarea>
+							<span id="error_poll_description"></span>
+						</li>
+
+						<li class="poll_num_choices" style="display: none;">
+							<legend class="big-legend">Number of choices</legend>
+							<select name="poll_num_choices" id="poll_num_choices"><option selected="true" disabled="disabled">Choose</option>   <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+								<option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
+							<span id="error_poll_num_choices"></span>
+						</li>
+
+						<li
+							class="options_list" style="display: none;">
+							<div>
+								<legend>Options</legend>
+								<span
+									id="choice">
+								</span>
+							</div>
+						</li>
+
+						<li class="poll_amount" style="display: none;">
+							<legend class="legend">Charges ( in ETH )</legend>
+							<input type="text" name="poll_amount" id="poll_amount" autocomplete="off" placeholder="e.g., 0.1" /><br/>
+							<small>Minimum support required is <span id="minEthTransactionDetail">0</span> ETH.</small><br/>
+							<span id="error_poll_contract"></span>
+						</li>
+
+						<li
+							class="submit"
+							style="margin-left: 25rem;display: none;">
+							<a id="submit" class="button button-large">Create</a><br/>
+						</li>
+					</ul>
+					<span id="success-msg"></span>
+				</form>
+			</div>
+			<div class="column column-20">
+
+			</div>
+		</div>
+	</div>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-104980375-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

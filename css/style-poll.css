@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
+body {
+	background-color: #eee;
+}
+input{
+	margin-bottom: 0px;
+}
+
+legend{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.options_list{
+	width: 90%;
+	margin-left: 30px;
+}
+.poll_amount {
+	margin-left: 25rem;
+}
+#poll_amount{
+	width: 40%;
+	height: 4rem;
+	font-size: 2rem;
+}
+
+.big-legend{
+	margin-top: 30px;
+	font-size: 30px;
+}
+
+.paperpage {
+	background-color: #fff;
+	border-radius: 10px;
+	padding-bottom: 40px;
+}
+
+.poll_description {
+	margin: 10px;
+	padding: 20px, 30px, 20px, 30px;
+}
+
+.vote {
+	margin-top: 50px;
+}
+
+.vote .box {
+	width: 100%;
+  position: relative;
+  background-color: #fff;
+  padding: 4em 1em;
+  border: 1px solid #ececec;
+  border-bottom: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vote .box:last-child {
+  border-bottom: 1px solid #ececec;
+}
+
+.voteperc {
+	margin-top: 20px;
+}
+.line {
+	width: 100%;
+  background:#aaa;
+  position:relative;
+  height:5px;
+}
+
+.line:before {
+  content:'';
+  background:green;
+  width:0%;
+  height:5px;
+  position:absolute;
+}
+
+.choice_content {
+	width: 100%;
+}
+.voteamount {
+	float: left;
+	font-size: .8em;
+}
+.votebtn {
+  background-color: green;
+  border-color: green;
+	font-size: 1em;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding: 0 1.5rem;
+	float: right;
+}
+.votegray {
+	background-color: #fff;
+	border-color: #fff;
+	color: #000;
+}
+.votediv {
+	margin-top: 20px;
+}
+
+.button-large {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 2rem;
+}
+.navbar {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+#mytokens {
+	font-family: 'Cardo', serif;
+	font-size: 1.5em;
+}
+
+.loader {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+.loader:before{
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 4px;
+  background-color: #2980b9;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+@keyframes loading {
+    from {left: 50%; width: 0;z-index:100;}
+    33.3333% {left: 0; width: 100%;z-index: 10;}
+    to {left: 0; width: 100%;}
+}
+
+#info {
+	margin-top: 20px;
+	text-align: center;
+}

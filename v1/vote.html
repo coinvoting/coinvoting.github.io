@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Coin Voting dapp </title>
+	<link rel="stylesheet" type="text/css" href="css/milligram.css">
+	<link rel="stylesheet" type="text/css" href="css/style-poll.css">
+	<link rel="icon" type="image/x-icon" href="logo.png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/strarrbuffutils.js"></script>
+	<script type="text/javascript" src="js/web3.js"></script>
+	<script type="text/javascript" src="js/vote.min.js"></script>
+	<script type="text/javascript" src="js/dentist.js"></script>
+	<script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+</head>
+<body>
+	<div class="navbar">
+		<span id="mytokens"></span>
+	</div>
+	<div class="container paperpage vote">
+		<div class="loader"></div>
+
+		<div class="row">
+			<div class="column column-80 column-offset-10">
+				<h2 style="text-align: center;" id="poll_title">Loading...</h2>
+				<div id="poll_description"></div>
+				<div id="success-msg" style="color: green; font-weight: bold;"></div>
+			</div>
+		</div>
+
+		<div class="row">
+      <div id="all_choices" class="column column-80 column-offset-10">
+      </div>
+      <div id="pie_chart" class="column column-60 column-offset-20">
+      </div>
+		</div>
+		<div class="row" id="info">
+			<div class="column column-80 column-offset-10">
+				<small><a href="https://coinvoting.github.io/" target="_blank">Set up your own coin voting like this for proposals backed by any ERC20 tokens or ETH.</a></small>
+			</div>
+		</div>
+	</div>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-104980375-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

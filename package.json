@@ -1,0 +1,20 @@
+{
+  "name": "distrivote-dapp",
+  "version": "0.0.8",
+  "description": "Distributed Voting Contract as a Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-parag-arora:parag-arora/distrivote-landing.git"
+  },
+  "author": "Parag Arora <me@paragarora.com>",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1",
+    "uglifyjs": "^2.4.11"
+  }
+}
