@@ -4,6 +4,20 @@ body {
     background-color: transparent;
     color: #ddd;
 }
+.newsy {
+  background: #fdfdfd;
+  color: #000;
+  padding: 5px;
+  text-align: center;
+  z-index: 9;
+  color: #2c2c2c;
+}
+
+.newsy a:hover {
+  text-decoration: none;
+  color: #2c2c2c;
+  border: 1px solid #f5f5f5;
+}
 
 .cta {
   text-align: center;
